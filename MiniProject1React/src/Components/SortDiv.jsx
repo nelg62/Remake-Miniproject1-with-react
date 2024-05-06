@@ -4,14 +4,14 @@ function SortDiv() {
   return (
     <div className="container text-center mt-3">
       {/* <!-- sort A-Z Z-A Button--> */}
-      <label for="sortbtn">
+      <label htmlFor="sortbtn">
         Sort:
-        <button type="button" id="sortbtn" onClick={SortFun()}>
+        <button type="button" id="sortbtn" onClick={() => SortFun()}>
           A-Z
         </button>
       </label>
       {/* <!-- search Bar--> */}
-      <label for="searchBar">
+      <label htmlFor="searchBar">
         Search: <input type="search" id="searchBar" />
       </label>
     </div>

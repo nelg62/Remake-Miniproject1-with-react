@@ -47,7 +47,6 @@ const newCharacter = [
     ),
   ];
 
-const characterItems = newCharacter.map((character))
 
 function OneCharacter({}) {
 
