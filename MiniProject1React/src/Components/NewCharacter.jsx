@@ -44,8 +44,14 @@ function NewCharacter() {
 
     const [currentCharacter, setCurrentCharacter] = useState(characters);
 
+
+
+    const handleDeleteCharacter = (id) => {
+        setCurrentCharacter(currentCharacter.filter((characters) => characters.id !== id))
+      }
+
     const characterItems = currentCharacter.map((character) => (
-        <SingleCharacter key={character.id} {...character}/>
+        <SingleCharacter key={character.id} {...character} onDelete={handleDeleteCharacter}/>
       ));
 
       const handleAddCharacter = (newCharacter) => {

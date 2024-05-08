@@ -1,6 +1,9 @@
-function SingleCharacter({ id, first, last, img, desc }) {
+function SingleCharacter({ id, first, last, img, desc, onDelete}) {
 
-  
+    const handleDelete = () => {
+        onDelete(id)
+      }
+
     return (
     // <!-- template for card-->
     <div className="listitem card border rounded bg-primary-subtle border-primary-subtle">
@@ -13,7 +16,7 @@ function SingleCharacter({ id, first, last, img, desc }) {
         alt={`Picture of ${first}`}
       />
       <div className="tempdesc card-text">{desc}</div>
-      {/* <button id="removeBtn" onClick="removecurrentitem(this)">Remove</button> */}
+      <button id="removeBtn" onClick={handleDelete}>Remove</button>
       {/* <button id="editBtn" onClick="getvalue(this)">Edit</button> */}
     </div>
   );
