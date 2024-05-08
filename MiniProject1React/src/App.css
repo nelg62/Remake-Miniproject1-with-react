@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+#formdiv {
+  width: 600px;
+}
