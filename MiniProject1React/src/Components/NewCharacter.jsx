@@ -72,31 +72,25 @@ function NewCharacter() {
   };
 
   return (
-    <>
+    <div className="p-4">
       {/* heading for Form */}
-      <div
-        className="container text-center border rounded bg-primary-subtle border-primary-subtle"
-        id="formdiv"
-      >
-        <h1>Create a character</h1>
+      <div className="text-center border border-gray-300 rounded-lg bg-gray-100 p-4 shadow-md mb-4">
+        <h1 className="text-2xl font-bold">Create a character</h1>
         <AddCharacterForm
           onAddCharacter={handleAddCharacter}
         ></AddCharacterForm>
       </div>
 
       {/* <!-- Heading for cards --> */}
-      <div className="text-center m-3">
-        <h2>Created Characters</h2>
+      <div className="text-center mb-4">
+        <h2 className="text-xl font-semibold">Created Characters</h2>
       </div>
 
       {/* <!-- output of card --> */}
-      <div
-        id="characteroutput"
-        className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4"
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {characterItems}
       </div>
-    </>
+    </div>
   );
 }
 
