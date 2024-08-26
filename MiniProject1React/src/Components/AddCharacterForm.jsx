@@ -50,104 +50,110 @@ function AddCharacterForm({ onAddCharacter }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit} //handle submit of form
-      className="space-y-4 p-4 max-w-md mx-auto bg-white shadow-md rounded-md"
-    >
-      <div>
-        {/* <!-- First Name Input --> */}
-        <label
-          htmlFor="fname"
-          className="block text-lg font-medium text-teal-700"
-        >
-          First Name:
-        </label>
-        <input
-          type="text"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:border-teal-500 focus:ring-teal-500"
-          id="fname"
-          name="FirstName"
-          value={first}
-          onChange={(e) => setFirst(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        {/* <!-- Last Name Input--> */}
-        <label
-          htmlFor="lname"
-          className="block text-lg font-medium text-teal-700"
-        >
-          Last Name:
-        </label>
-        <input
-          type="text"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:border-teal-500 focus:ring-teal-500"
-          id="lname"
-          name="LastName"
-          value={last}
-          onChange={(e) => setLast(e.target.value)}
-          required
-        />
-      </div>
-
-      {/* <!-- Image Choice --> */}
-      <div>
-        <label
-          htmlFor="outputimg"
-          className="block text-lg font-medium text-teal-700"
-        >
-          Image:
-        </label>
-        <div className="flex justify-center items-center">
-          <img
-            src={img || defaultImg} // Display selected image or default image
-            alt="Your image here"
-            className="mt-1 w-32 h-32 object-cover rounded-md border border-teal-500"
-            id="outputimg"
-          />
-        </div>
-
-        <div className="mt-2">
-          <input
-            type="file"
-            accept="image/*"
-            name="image"
-            id="file"
-            className="block w-full text-teal-700 file:bg-teal-100 file:border file:border-teal-300 file:text-teal-700 file:rounded-md file:py-1 file:px-2 hover:file:bg-teal-200"
-            onChange={handleImageChange} // Handle image change
-            required
-          />
-        </div>
-
-        {/* <!-- Description Input --> */}
-        <div className="mt-4">
+    <div className="flex justify-center items-center min-h-screen bg-background">
+      <form
+        onSubmit={handleSubmit} //handle submit of form
+        className="w-full max-w-lg p-8 bg-background-paper shadow-lg rounded-lg"
+      >
+        <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
+          Create New Character
+        </h2>
+        <div className="mb-4">
+          {/* <!-- First Name Input --> */}
           <label
-            htmlFor="desc"
-            className="block text-lg font-medium text-teal-700"
+            htmlFor="fname"
+            className="block text-text-primary font-medium mb-2"
           >
-            Description:
+            First Name:
           </label>
           <input
             type="text"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:border-teal-500 focus:ring-teal-500"
-            id="desc"
-            name="description"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
+            className="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            id="fname"
+            name="FirstName"
+            placeholder="Enter first name"
+            value={first}
+            onChange={(e) => setFirst(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-4">
+          {/* <!-- Last Name Input--> */}
+          <label
+            htmlFor="lname"
+            className="block text-text-primary font-medium mb-2"
+          >
+            Last Name:
+          </label>
+          <input
+            type="text"
+            className="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            id="lname"
+            name="LastName"
+            placeholder="Enter last name"
+            value={last}
+            onChange={(e) => setLast(e.target.value)}
             required
           />
         </div>
 
-        {/* <!-- Submit Button --> */}
-        <button
-          type="submit"
-          className="mt-4 w-full bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
+        {/* <!-- Image Choice --> */}
+        <div className="mb-4">
+          <label
+            htmlFor="outputimg"
+            className="block text-text-primary font-medium mb-2"
+          >
+            Image:
+          </label>
+          <div className="flex items-center justify-center mb-2">
+            <img
+              src={img || defaultImg} // Display selected image or default image
+              alt="Your image here"
+              className="-32 h-32 object-contain rounded-full border-2 border-primary"
+              id="outputimg"
+            />
+          </div>
+
+          <div className="mt-2">
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              className="w-full px-3 py-2 text-text-primary border border-neutral rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              onChange={handleImageChange} // Handle image change
+            />
+          </div>
+
+          {/* <!-- Description Input --> */}
+          <div className="mb-6">
+            <label
+              htmlFor="desc"
+              className="block text-text-primary font-medium mb-2"
+            >
+              Description:
+            </label>
+            <input
+              type="text"
+              className="w-full px-4 py-2 border border-neutral rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              id="desc"
+              name="description"
+              placeholder="Enter character description"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+            />
+          </div>
+
+          {/* <!-- Submit Button --> */}
+          <button
+            type="submit"
+            className="w-full py-3 bg-primary text-text-light font-semibold rounded-md hover:bg-primary-light transition duration-300"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 
