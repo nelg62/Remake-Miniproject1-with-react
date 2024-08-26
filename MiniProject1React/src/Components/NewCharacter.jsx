@@ -2,7 +2,9 @@ import { useState } from "react";
 import SingleCharacter from "./SingleCharacter";
 import AddCharacterForm from "./AddCharacterForm";
 
+// Functional component for managing and displaying characters
 function NewCharacter() {
+  // Initial list of characters
   const characters = [
     {
       id: 1,
@@ -41,15 +43,20 @@ function NewCharacter() {
     },
   ];
 
+  // State to manage the list of current characters
   const [currentCharacter, setCurrentCharacter] = useState(characters);
 
+  // Function to handle character deletion
   const handleDeleteCharacter = (id) => {
+    // Filter out the character with the specified id when adding data base a backend I will actually make into delete
     setCurrentCharacter(
-      currentCharacter.filter((characters) => characters.id !== id)
+      currentCharacter.filter((character) => character.id !== id)
     );
   };
 
+  // Function to handle character editing
   const handleEditCharacter = (id, updatedCharacter) => {
+    // Update the character with the matching id
     setCurrentCharacter(
       currentCharacter.map((character) =>
         character.id === id ? { ...character, ...updatedCharacter } : character
@@ -57,38 +64,42 @@ function NewCharacter() {
     );
   };
 
+  // Map through the characters to create SingleCharacter components
   const characterItems = currentCharacter.map((character) => (
     <SingleCharacter
       key={character.id}
-      {...character}
-      onDelete={handleDeleteCharacter}
-      onEdit={handleEditCharacter}
+      {...character} // pass copy of Character properties as props
+      onDelete={handleDeleteCharacter} // Pass delete handler
+      onEdit={handleEditCharacter} // Pass edit handler
     />
   ));
 
+  // Function to handle adding a new character
   const handleAddCharacter = (newCharacter) => {
-    newCharacter.id = currentCharacter.length + 1;
+    newCharacter.id = currentCharacter.length + 1; // Assign a new ID
+    //  Add the new character to the current list
     setCurrentCharacter([...currentCharacter, newCharacter]);
   };
 
   return (
-    <div className="p-4">
-      {/* heading for Form */}
-      <div className="text-center border border-gray-300 rounded-lg bg-gray-100 p-4 shadow-md mb-4">
-        <h1 className="text-2xl font-bold">Create a character</h1>
-        <AddCharacterForm
-          onAddCharacter={handleAddCharacter}
-        ></AddCharacterForm>
+    <div className="p-4 bg-gray-50 min-h-screen">
+      {/* Heading for the character creation Form */}
+      <div className="text-center border border-gray-300 rounded-lg bg-white p-4 shadow-lg mb-6">
+        <h1 className="text-3xl font-bold text-teal-600">Create a Character</h1>
+        {/* AddCharacterForm component to handle new character creation */}
+        <AddCharacterForm onAddCharacter={handleAddCharacter} />
       </div>
 
-      {/* <!-- Heading for cards --> */}
-      <div className="text-center mb-4">
-        <h2 className="text-xl font-semibold">Created Characters</h2>
+      {/* Heading for displaying created characters */}
+      <div className="text-center mb-6">
+        <h2 className="text-2xl font-semibold text-teal-600">
+          Created Characters
+        </h2>
       </div>
 
-      {/* <!-- output of card --> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {characterItems}
+      {/* Grid to display character cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {characterItems} {/* Render character cards */}
       </div>
     </div>
   );
