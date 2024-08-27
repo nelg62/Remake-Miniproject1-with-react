@@ -34,11 +34,13 @@ function SingleCharacter({ id, first, last, img, desc, onDelete, onEdit }) {
         />
       ) : (
         //  If not in editing mode display the character details
-        <div className="w-80 bg-white border border-gray-300 rounded-lg p-6 flex flex-col items-center shadow-lg">
+        <div className="w-80 bg-background-paper border border-neutral rounded-lg p-6 flex flex-col items-center shadow-lg">
           {/* Dispaly character ID */}
-          <div className="text-gray-500 text-lg font-bold mb-3">ID: {id}</div>
+          <div className="text-neutral-dark text-lg font-bold mb-3">
+            ID: {id}
+          </div>
           {/* Dispaly characters name */}
-          <h5 className="text-xl font-semibold mb-2">
+          <h5 className="text-xl font-semibold mb-2 text-text-primary">
             {first} {last}
           </h5>
           {/* Display characters image */}
@@ -48,12 +50,12 @@ function SingleCharacter({ id, first, last, img, desc, onDelete, onEdit }) {
             alt={`Picture of ${first} ${last}`} // Alt text for image
           />
           {/* Dispaly characters description */}
-          <p className="text-gray-700 text-center mb-4">{desc}</p>
+          <p className="text-text-secondary text-center mb-4">{desc}</p>
           {/* Action buttons */}
           <div className="flex space-x-3">
             {/* Remove button */}
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300"
+              className="bg-error text-text-light px-4 py-2 rounded-md hover:bg-error-dark transition duration-300"
               id="removeBtn"
               onClick={handleDelete} // Call handleDelete when clicked
             >
@@ -61,7 +63,7 @@ function SingleCharacter({ id, first, last, img, desc, onDelete, onEdit }) {
             </button>
             {/* Edit button */}
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+              className="bg-primary text-text-light px-4 py-2 rounded-md hover:bg-primary-dark transition duration-300"
               id="editBtn"
               onClick={handleEdit} // Call handleEdit when clicked
             >

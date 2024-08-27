@@ -82,9 +82,9 @@ function NewCharacter() {
   };
 
   return (
-    <div className="p-4 bg-gray-50 min-h-screen">
+    <div className="p-4 bg-background min-h-screen">
       {/* Heading for the character creation Form */}
-      <div className="text-center border border-gray-300 rounded-lg bg-white p-4 shadow-lg mb-6">
+      <div className="text-center border border-neutral dark:bg-white p-4 shadow-lg mb-6 rounded-lg">
         {/* <h1 className="text-3xl font-bold text-teal-600">Create a Character</h1> */}
         {/* AddCharacterForm component to handle new character creation */}
         <AddCharacterForm onAddCharacter={handleAddCharacter} />
@@ -92,7 +92,7 @@ function NewCharacter() {
 
       {/* Heading for displaying created characters */}
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-semibold text-teal-600">
+        <h2 className="text-2xl font-semibold text-primary">
           Created Characters
         </h2>
       </div>
