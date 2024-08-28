@@ -7,10 +7,7 @@ import NewCharacter from "./Components/NewCharacter";
 function App() {
   return (
     <>
-     
-      
-        <NewCharacter></NewCharacter>
-      
+      <NewCharacter></NewCharacter>
     </>
   );
 }

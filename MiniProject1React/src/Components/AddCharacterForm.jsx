@@ -50,7 +50,7 @@ function AddCharacterForm({ onAddCharacter }) {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-background">
+    <div className="flex justify-center items-center min-h-screen">
       <form
         onSubmit={handleSubmit} //handle submit of form
         className="w-full max-w-lg p-8 bg-background-paper shadow-lg rounded-lg"
