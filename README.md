@@ -17,7 +17,7 @@
 <h3 align="center">Mini Project 1 Character Creator App</h3>
 
   <p align="center">
-    This is the first project I created as part of my course at the Institute of Data (IOD). After learning the fundamentals of web development, we were tasked with building a CRUD (Create, Read, Update, Delete) application to apply our new skills. I chose to develop a Character Creator app because I wanted to create something fun and interactive, allowing users to craft and share unique characters.
+    This is the first project I created as part of my course at the Institute of Data (IOD). After learning the fundamentals of web development, we were tasked with building a CRUD (Create, Read, Update, Delete) application to apply our new skills learnig about front end development. I chose to develop a Character Creator app because I wanted to create something fun and interactive, allowing users to craft and share unique characters.
 
 <br />
 <a href="https://github.com/nelg62/Remake-Miniproject1-with-react"><strong>Explore the docs »</strong></a>
