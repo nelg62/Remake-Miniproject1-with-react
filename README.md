@@ -175,8 +175,8 @@ in progress...
 
 ## Roadmap
 
-- [ X ] Recreated project in react
-- [ X ] Host in cloud (Netlify)
+- [x] Recreated project in react
+- [x] Host in cloud (Netlify)
 - [ ] Changed styling to Tailwind CSS to make the design more responsive on all platforms - in progress...
 - [ ] add more features and styling also backend and database to be added
 - [ ] add ability to customise cards e.g backgrounds borders and text mabie add animations
