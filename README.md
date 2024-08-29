@@ -68,25 +68,42 @@ This project began as a simple HTML, CSS, and JavaScript application but has sin
 <h4>Key Components</h4>
 <h6>AddCharacterForm Component (AddCharacterForm.jsx)</h6>
 Purpose: Handles the form input where users can add new characters, capturing details such as the first and last name, an optional image, and a description.
+
 Features:
-Allows users to upload an image or defaults to a placeholder if no image is provided.
-Includes form validation to ensure all fields are filled before submission.
-Clears inputs upon submission and adds the new character to the list.
+
+<ul>
+<li>Allows users to upload an image or defaults to a placeholder if no image is provided.</li>
+<li>Includes form validation to ensure all fields are filled before submission.</li>
+<li>Clears inputs upon submission and adds the new character to the list.</li>
+</ul>
+
 <h6>NewCharacter Component (NewCharacter.jsx)</h6>
 Purpose: Manages the state of the character list and renders all characters, along with the form to add new ones.
+
 Features:
-Displays a form for creating a new character.
-Renders a grid of character cards showcasing the added characters.
-Provides functionality to delete or edit existing characters.
+
+<ul>
+<li>Displays a form for creating a new character.</li>
+<li>Renders a grid of character cards showcasing the added characters.</li>
+<li>Provides functionality to delete or edit existing characters.</li>
+</ul>
 <h6>SingleCharacter Component (SingleCharacter.jsx)</h6>
 Purpose: Represents an individual character card, displaying character information and providing options to delete or edit the character.
+
 Features:
-Toggles between viewing and editing a character's details.
-Allows characters to be updated through the same form used for creating new characters.
+
+<ul>
+<li>Toggles between viewing and editing a character's details.</li>
+<li>Allows characters to be updated through the same form used for creating new characters.</li>
+</ul>
+
 User Workflow
-Add a Character: Users fill out the form with the character's first name, last name, image, and description, then submit to add the character to the list.
-Edit a Character: Users can edit an existing character's details by clicking the "Edit" button on a character card. The form appears pre-filled with the current details for modification.
-Delete a Character: Users can remove a character from the list by clicking the "Remove" button on the character's card.
+
+<ul>
+<li>Add a Character: Users fill out the form with the character's first name, last name, image, and description, then submit to add the character to the list.</li>
+<li>Edit a Character: Users can edit an existing character's details by clicking the "Edit" button on a character card. The form appears pre-filled with the current details for modification.</li>
+<li>Delete a Character: Users can remove a character from the list by clicking the "Remove" button on the character's card.</li>
+</ul>
 <h6>Technologies Used</h6>
 <ul>
 <li>React: For building the user interface and managing state.</li>
