@@ -176,8 +176,10 @@ in progress...
 ## Roadmap
 
 - [ X ] Recreated project in react
+- [ X ] Host in cloud (Netlify)
 - [ ] Changed styling to Tailwind CSS to make the design more responsive on all platforms - in progress...
-- [ ] add more features and styling also backend and database to be added - [ ]
+- [ ] add more features and styling also backend and database to be added
+- [ ] add ability to customise cards e.g backgrounds borders and text mabie add animations
 
 See the [open issues](https://github.com/nelg62/Remake-Miniproject1-with-react/issues) for a full list of proposed features (and known issues).
 
